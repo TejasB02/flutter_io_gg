@@ -66,7 +66,7 @@ class _MainScreenState extends State<MainScreen> {
                       child: Hero(
                         tag: "Rock",
                         child: gameBtn(() {
-                          print("you choosed rock");
+                          print("you chose rock");
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -78,14 +78,14 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                     ),
                     Positioned(
-                      top: btnWidth,
+                      top: btnWidth*1.5,
                       left: MediaQuery.of(context).size.width / 2 -
                           btnWidth -
                           40, // we soustract the half of ther widget size and the half of the padding,
                       child: Hero(
                         tag: "Scisors",
                         child: gameBtn(() {
-                          print("you choosed scisors");
+                          print("you chose scisors");
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -97,14 +97,14 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                     ),
                     Positioned(
-                      top: btnWidth,
+                      top: btnWidth*1.5,
                       right: MediaQuery.of(context).size.width / 2 -
                           btnWidth -
                           40, // we soustract the half of ther widget size and the half of the padding,
                       child: Hero(
                         tag: "Paper",
                         child: gameBtn(() {
-                          print("you choosed paper");
+                          print("you chose paper");
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -119,21 +119,17 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
             ),
-            Container(
-              width: double.infinity,
-              child: RawMaterialButton(
-                padding: EdgeInsets.all(24.0),
-                onPressed: () {},
-                shape: StadiumBorder(
-                    side: BorderSide(color: Colors.white, width: 5)),
-                child: Text(
-                  "Rules",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 26.0,
-                      fontWeight: FontWeight.bold),
+            Column(
+              children: const [
+                SizedBox(
+                  width: double.infinity,
+                  height: 50,
                 ),
-              ),
+                Text(
+                  'gg',
+                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold,color: Colors.white),
+                ),
+              ],
             )
           ],
         ),
